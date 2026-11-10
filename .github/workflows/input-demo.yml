@@ -1,6 +1,6 @@
 name: Inputs demo
 on:
- workflow_dispatch:
+  workflow_dispatch:
   inputs:
     environment:
      description: choose the enviorment to deploy
