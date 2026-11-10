@@ -1,5 +1,5 @@
 name: Inputs demo
-on: 
+on:
  workflow_dispatch: 
   inputs:
     environment:
