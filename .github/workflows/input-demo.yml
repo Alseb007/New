@@ -6,7 +6,7 @@ on:
         description: choose the enviorment to deploy
         required: true
         default: dev
- jobs:
+jobs:
    input-demo:
      runs-on: ubuntu-latest
      steps:
