@@ -1,13 +1,2 @@
-name: GitHub Action Demo
-on: workflow_dispatch
-env:
-  APP_ENV: "dev"
-jobs:
-  env_demo:
-   env:
-     APP_ENV: "test"
-   runs-on: ubuntu-latest
-   steps:
-     - name: Connecting to Env
-       run: echo "App is conncting to $APP_ENV"
+
        
