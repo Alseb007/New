@@ -10,7 +10,7 @@ on:
         options:
           - dev
           - prod
-          -test
+          - test
 
       artifact_tag:
         description: Choose the git tag to deploy
