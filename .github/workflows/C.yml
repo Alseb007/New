@@ -7,6 +7,15 @@ on:
         description: "Choose the environment to deploy"
         required: true
         default: "dev"
+        options:
+          - dev
+          - prod
+          -test
+
+      artifact_tag:
+        description: Choose the git tag to deploy
+        required: true
+        
        
 
 jobs:
@@ -15,4 +24,4 @@ jobs:
 
     steps:
       - name: Deploy the app
-        run: echo "This is done to ${{ inputs.environment }}"
+        run: echo "Deploying ${{ inputs.artifact_tag }}This is done to ${{ inputs.environment }}"
