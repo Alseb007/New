@@ -15,7 +15,7 @@ on:
       artifact_tag:
         description: Choose the git tag to deploy
         required: true
-        
+        default: V2.1.1.1
        
 
 jobs:
