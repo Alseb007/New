@@ -40,6 +40,6 @@ jobs:
         run: |
           echo "Deploying build version: ${{ steps.version.outputs.build_number }}"
     
-    steps:
+    
       - name: Deploy the app
         run: echo "Deploying ${{ inputs.artifact_tag }}This is done to ${{ inputs.environment }}"
