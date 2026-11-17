@@ -6,9 +6,9 @@ on:
      description: chose the enviornment to display
      required: true
      default: dev
- jobs:
-   inputs-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: shit
-        run: echo"Deploy the application to ${{ inputs.enviornment }}"
+jobs:
+  inputs-demo:
+   runs-on: ubuntu-latest
+   steps:
+     - name: shit
+       run: echo"Deploy the application to ${{ inputs.enviornment }}"
