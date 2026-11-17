@@ -5,7 +5,12 @@ on:
       enviornment:
         description: chose the enviornment to display
         required: true
-        default: dev
+        type: choice
+        options:
+          - dev
+          - prod
+          - test
+        default: test
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest
