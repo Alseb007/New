@@ -1,1 +1,10 @@
 name: NewFirst
+on:
+ workflow_run: 
+jobs:
+  input-demo:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Display the app
+       run: echo " This is done bro "
+   
