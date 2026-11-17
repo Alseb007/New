@@ -14,9 +14,14 @@ on:
       tag:
        description: choose the tag to deploy
        required: true
+       type: choice
+       options:
+         - 1.0
+         - 2.0
+         - 3.6
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: shit
+      - name: show the output
         run: echo "Deploy the ${{ inputs.tag}} application to ${{ inputs.enviornment }}"
