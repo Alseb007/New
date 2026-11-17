@@ -6,4 +6,5 @@ jobs:
     steps:
       - name: Use Context variable
         run: echo "This workflow is triggered by ${{ github.actor }}"
+      - name: repository name
         run: echo "The repository name is ${{ github.repository }}
