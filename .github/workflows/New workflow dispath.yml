@@ -2,13 +2,13 @@ name: enviornment
 on: 
  workflow_dispatch: 
   inputs:
-    enviornment:
+   enviornment:
      description: chose the enviornment to display
      required: true
      default: dev
 jobs:
   inputs-demo:
-   runs-on: ubuntu-latest
-   steps:
-     - name: shit
-       run: echo"Deploy the application to ${{ inputs.enviornment }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: shit
+        run: echo"Deploy the application to ${{ inputs.enviornment }}"
