@@ -1,11 +1,11 @@
 name: enviornment
 on: 
- workflow_dispatch: 
-  inputs:
-   enviornment:
-     description: chose the enviornment to display
-     required: true
-     default: dev
+  workflow_dispatch: 
+    inputs:
+      enviornment:
+        description: chose the enviornment to display
+        required: true
+        default: dev
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest
