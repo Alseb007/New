@@ -10,6 +10,5 @@ on:
    inputs-demo:
     runs-on: ubuntu-latest
     steps:
-    
-      - name: Deploy the App
-       run: echo"Deploy the application to ${{ inputs.enviornment }}"
+      - name: shit
+        run: echo"Deploy the application to ${{ inputs.enviornment }}"
