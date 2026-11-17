@@ -11,9 +11,12 @@ on:
           - prod
           - test
         default: test
+      tag:
+       description: choose the tag to deploy
+       required: true
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest
     steps:
       - name: shit
-        run: echo "Deploy the application to ${{ inputs.enviornment }}"
+        run: echo "Deploy the ${{ inputs.tag}} application to ${{ inputs.enviornment }}"
