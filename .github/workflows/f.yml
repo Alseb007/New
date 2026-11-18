@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Runs this steps
-        if: github.ref == 'refs/heads/main'
+        if: inputs.environment == 'main'
         run: echo "Running this step says as main"
       - name: Runs this step
+        if: inputs.environment == 'develop'
         run: echo "running this step"
