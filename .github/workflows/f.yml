@@ -1,15 +1,22 @@
 name: if
 on:
-  push: 
-    branches: 
-      - main
-      - develop
+  workflow_dispatch: 
+   inputs:
+     environment:
+       description: Target env
+       required: true
+       default: demo
+       type: choice
+       options:
+         - main
+         - develop
+     
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
       - name: Runs this steps
         if: github.ref == 'refs/heads/main'
-        run: echo "Running this step"
+        run: echo "Running this step says as main"
       - name: Runs this step
         run: echo "running this step"
