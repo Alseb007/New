@@ -24,3 +24,6 @@ jobs:
   drjob:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref_name == 'develop1'
+    steps:
+      - name: run drjob
+        run: echo "deploy drjob"
