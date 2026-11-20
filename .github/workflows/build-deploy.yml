@@ -3,6 +3,7 @@ on:
   push: 
     branches: 
       - main
+      - develop1
   pull_request:
     types:
       - opened
@@ -20,3 +21,6 @@ jobs:
     steps:
       - name: build step
         run: echo "deploy the step"
+  drjob:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref_name == 'develop1'
