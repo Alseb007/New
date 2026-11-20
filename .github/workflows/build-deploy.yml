@@ -10,4 +10,8 @@ jobs:
     steps:
       - name: build step
         run: echo "Building the app"
-      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy step
+        run: echo "deploy step"
