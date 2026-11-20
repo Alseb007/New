@@ -1,0 +1,45 @@
+name: Inputs demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Choose the environment to deploy"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - prod
+          - test
+
+      artifact_tag:
+        description: Choose the git tag to deploy
+        required: true
+        default: V2.1.1.1
+       
+
+jobs:
+  input-demo:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get commit count version
+        id: version
+        run: |
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          echo "build_number=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+          echo "Current build number is: $COMMIT_COUNT"
+
+      - name: Use the incremented version
+        run: |
+          echo "Deploying build version: ${{ steps.version.outputs.build_number }}"
+    
+    
+      - name: Deploy the app
+        run: echo "Deploying ${{ inputs.artifact_tag }}This is done to ${{ inputs.environment }}"

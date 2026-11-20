@@ -1,0 +1,22 @@
+name: envdemo
+
+on: workflow_dispatch
+env:
+  APP_ENV: "dev"
+  APP_PU: "Pussy"
+
+jobs:
+  env_demo:
+   env:
+     APP_ENV: "test"
+   runs-on: ubuntu-latest
+   steps:
+     - name: Connecting to env
+       run: echo "App is connecting to $APP_ENV"
+
+  secondJob:
+   runs-on: ubuntu-latest
+   needs: env_demo
+   steps:
+     - name: conneting to pus
+       run: echo " App is connecting to $APP_PU"

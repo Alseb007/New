@@ -1,0 +1,27 @@
+name: enviornment
+on: 
+  workflow_dispatch: 
+    inputs:
+      enviornment:
+        description: chose the enviornment to display
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - test
+        default: test
+      tag:
+       description: choose the tag to deploy
+       required: true
+       type: choice
+       options:
+         - 1.0
+         - 2.0
+         - 3.6
+jobs:
+  inputs-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show the output
+        run: echo "Deploy the ${{ inputs.tag}} application to ${{ inputs.enviornment }}"
